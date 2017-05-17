@@ -1,0 +1,90 @@
+entityName: 'Page'
+entity: 'AppBundle\Entity\Page'
+repository: 'AppBundle:Page'
+paginate: true
+index: 'page'
+view_index: 'AppBundle:page:index.html.twig'
+new: 'page_new'
+create: 'page_create'
+view_new: 'AppBundle:page:new.html.twig'
+edit: 'page_edit'
+update: 'page_update'
+view_edit: 'AppBundle:page:edit.html.twig'
+show: 'page_show'
+view_show: 'AppBundle:page:show.html.twig'
+delete: 'page_delete'
+export: 'page_export'
+sessionFilter: 'PageControllerFilter'
+saveAndAdd: true
+validator: false
+fieldsindex:
+    a.id:
+        label: 'Id'
+        name: 'Id'
+        type: 'integer'
+        export: true
+    a.title:
+        label: 'Title'
+        name: 'Title'
+        type: 'string'
+        export: true
+    a.content:
+        label: 'Content'
+        name: 'Content'
+        type: 'text'
+        export: true
+    a.pageDate:
+        label: 'Pagedate'
+        name: 'Pagedate'
+        type: 'date'
+        date: 'Y-m-d'
+        export: true
+    a.active:
+        label: 'Active'
+        name: 'Active'
+        type: 'boolean'
+        export: true
+fieldsshow:
+    a.id:
+        label: 'Id'
+        name: 'Id'
+        type: 'integer'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.title:
+        label: 'Title'
+        name: 'Title'
+        type: 'string'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.content:
+        label: 'Content'
+        name: 'Content'
+        type: 'text'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.pageDate:
+        label: 'Pagedate'
+        name: 'Pagedate'
+        type: 'date'
+        date: 'Y-m-d'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.active:
+        label: 'Active'
+        name: 'Active'
+        type: 'boolean'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.posts:
+        label: 'Posts'
+        name: 'Posts'
+        type: 'ONE_TO_MANY'
+        #class: 'col-lg-12'
+        #closerow: true
+    a.posts_embeds:
+        label: 'Posts Embeds'
+        name: 'PostsEmbeds'
+        type: 'ONE_TO_MANY'
+        #class: 'col-lg-12'
+        #closerow: true

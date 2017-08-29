@@ -23,6 +23,7 @@ fieldsindex:
         name: 'Id'
         type: 'integer'
         export: true
+        class: 'hidden-xs'
     a.title:
         label: 'Title'
         name: 'Title'
@@ -38,6 +39,7 @@ fieldsindex:
         name: 'Pagedate'
         type: 'date'
         date: 'Y-m-d'
+        class: 'hidden-xs'
         export: true
     a.active:
         label: 'Active'

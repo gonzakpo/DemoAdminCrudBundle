@@ -2,9 +2,19 @@
 
 {% block javascript %}
     {{ parent() }}
-    <script src="{{ asset('bundles/mwsimpleadmincrud/js/addForm_not_validator.js') }}"></script>
+    <script src="{{ asset('bundles/mwsimpleadmincrud/js/addForm.js') }}"></script>
     <script src="{{ asset('bundles/mwsimpleadmincrud/js/embed.js') }}"></script>
     <script type="text/javascript">
         $('.post_embed').embed();
+        {# para mas de un nivel#}
+        $('.post_image').embed();
+
+        $('body').on('click', '.add_link_post_embed', function(e) {
+          var index = $(this).closest('.post_embed').attr('data-index');
+          if(typeof index === "undefined"){
+            index = $(this).closest('.form-group').find('.post_embed').attr('data-index');
+          }
+          $('.post_image'+index).embed();
+        });
     </script>
 {% endblock %}

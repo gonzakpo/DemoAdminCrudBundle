@@ -1,0 +1,186 @@
+entityName: 'Post'
+entity: 'AppBundle\Entity\Post'
+repository: 'AppBundle:Post'
+paginate: true
+index: 'post'
+view_index: 'AppBundle:post:index.html.twig'
+new: 'post_new'
+create: 'post_create'
+view_new: 'AppBundle:post:new.html.twig'
+edit: 'post_edit'
+update: 'post_update'
+view_edit: 'AppBundle:post:edit.html.twig'
+show: 'post_show'
+view_show: 'AppBundle:post:show.html.twig'
+delete: 'post_delete'
+export: 'post_export'
+sessionFilter: 'PostControllerFilter'
+saveAndAdd: true
+validator: true
+fieldsindex:
+    a.id:
+        label: 'Id'
+        name: 'id'
+        type: 'integer'
+        export: true
+    a.booleano:
+        label: 'Booleano'
+        name: 'booleano'
+        type: 'boolean'
+        export: true
+    a.entero:
+        label: 'Entero'
+        name: 'entero'
+        type: 'integer'
+        export: true
+    a.smallEntero:
+        label: 'Smallentero'
+        name: 'smallEntero'
+        type: 'smallint'
+        export: true
+    a.bigEntero:
+        label: 'Bigentero'
+        name: 'bigEntero'
+        type: 'bigint'
+        export: true
+    a.cadena:
+        label: 'Cadena'
+        name: 'cadena'
+        type: 'string'
+        export: true
+    a.texto:
+        label: 'Texto'
+        name: 'texto'
+        type: 'text'
+        export: true
+    a.fechatiempo:
+        label: 'Fechatiempo'
+        name: 'fechatiempo'
+        type: 'datetime'
+        date: 'Y-m-d H:i:s'
+        export: true
+    a.fecha:
+        label: 'Fecha'
+        name: 'fecha'
+        type: 'date'
+        date: 'Y-m-d'
+        export: true
+    a.tiempo:
+        label: 'Tiempo'
+        name: 'tiempo'
+        type: 'time'
+        date: 'H:i:s'
+        export: true
+    a.numerodecimal:
+        label: 'Numerodecimal'
+        name: 'numerodecimal'
+        type: 'decimal'
+        export: true
+    a.numeroconcoma:
+        label: 'Numeroconcoma'
+        name: 'numeroconcoma'
+        type: 'float'
+        export: true
+    a.page:
+        label: 'Page'
+        name: 'page'
+        type: 'MANY_TO_ONE'
+        export: true
+    a.pageEmbed:
+        label: 'Pageembed'
+        name: 'pageEmbed'
+        type: 'MANY_TO_ONE'
+fieldsshow:
+    a.id:
+        label: 'Id'
+        name: 'id'
+        type: 'integer'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.booleano:
+        label: 'Booleano'
+        name: 'booleano'
+        type: 'boolean'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.entero:
+        label: 'Entero'
+        name: 'entero'
+        type: 'integer'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.smallEntero:
+        label: 'Smallentero'
+        name: 'smallEntero'
+        type: 'smallint'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.bigEntero:
+        label: 'Bigentero'
+        name: 'bigEntero'
+        type: 'bigint'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.cadena:
+        label: 'Cadena'
+        name: 'cadena'
+        type: 'string'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.texto:
+        label: 'Texto'
+        name: 'texto'
+        type: 'text'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.fechatiempo:
+        label: 'Fechatiempo'
+        name: 'fechatiempo'
+        type: 'datetime'
+        date: 'Y-m-d H:i:s'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.fecha:
+        label: 'Fecha'
+        name: 'fecha'
+        type: 'date'
+        date: 'Y-m-d'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.tiempo:
+        label: 'Tiempo'
+        name: 'tiempo'
+        type: 'time'
+        date: 'H:i:s'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.numerodecimal:
+        label: 'Numerodecimal'
+        name: 'numerodecimal'
+        type: 'decimal'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.numeroconcoma:
+        label: 'Numeroconcoma'
+        name: 'numeroconcoma'
+        type: 'float'
+        #class: 'col-lg-12 col-md-12'
+        #closerow: true
+    a.page:
+        label: 'Page'
+        name: 'page'
+        type: 'MANY_TO_ONE'
+        #class: 'col-lg-12'
+        #closerow: true
+    a.pageEmbed:
+        label: 'Pageembed'
+        name: 'pageEmbed'
+        type: 'MANY_TO_ONE'
+        #class: 'col-lg-12'
+        #closerow: true
+    a.images:
+        label: 'Images'
+        name: 'images'
+        type: 'ONE_TO_MANY'
+        #class: 'col-lg-12'
+        #closerow: true

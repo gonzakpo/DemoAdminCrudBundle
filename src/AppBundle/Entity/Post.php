@@ -152,7 +152,17 @@ class Post
      */
     private $pageEmbed;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Image", mappedBy="post", cascade={"all"})
+     */
+     protected $images;
 
+
+    public function __construct()
+    {
+        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
     public function __toString()
     {
         return "ID: $this->id";
@@ -605,5 +615,41 @@ class Post
     public function getPageEmbed()
     {
         return $this->pageEmbed;
+    }
+
+    /**
+     * Add image
+     *
+     * @param \AppBundle\Entity\Image $image
+     *
+     * @return Post
+     */
+    public function addImage(\AppBundle\Entity\Image $image)
+    {
+        $image->setPost($this);
+
+        $this->images[] = $image;
+
+        return $this;
+    }
+
+    /**
+     * Remove image
+     *
+     * @param \AppBundle\Entity\Image $image
+     */
+    public function removeImage(\AppBundle\Entity\Image $image)
+    {
+        $this->images->removeElement($image);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->images;
     }
 }

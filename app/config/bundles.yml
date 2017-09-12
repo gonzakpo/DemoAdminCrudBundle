@@ -23,30 +23,34 @@ mw_simple_admin_crud:
     menu_setting: { id: side-menu, class: nav } # use id side-menu and class nav
     menu:
         child: { name: Home, url: mws_admin_crud_menu, id: home, icon: glyphicon glyphicon-home }
-        pages: { name: Pages, url: page, id: pages, icon: glyphicon glyphicon-home }
-        # child2:  
-        #    name: help
-        #    url: null
-        #    id: help
-        #    subMenu:
-        #        indice:
-        #            name: indice
-        #            url: mws_admin_crud_menu
-        #            icon: glyphicon glyphicon-home
-        #            roles: ['ROLE_ADMIN']
+        dropdown:  
+           name: dropdown
+           url: null
+           id: dropdown
+           subMenu:
+               pages: { name: Pages, url: page, id: pages, icon: glyphicon glyphicon-home }
+               posts: { name: Posts, url: post, id: posts, icon: glyphicon glyphicon-home }
+                #    roles: ['ROLE_ADMIN']
         #    roles: ['ROLE_USER']
         #child3: { name: Usuarios, url: admin_usuario, id: usuario, roles: ['ROLE_SUPERADMIN'], icon: glyphicon glyphicon-user }
 
 vich_uploader:
     db_driver: orm
     mappings:
-        test_image:
-            uri_prefix:         /images/test
-            upload_destination: %kernel.root_dir%/../web/images/test
-            namer:              vich_uploader.namer_origname
-            inject_on_load:     false
+        # test_image:
+        #     uri_prefix:         /images/test
+        #     upload_destination: %kernel.root_dir%/../web/images/test
+        #     namer:              vich_uploader.namer_origname
+        #     inject_on_load:     false
+        #     delete_on_update:   true
+        #     delete_on_remove:   true
+        imagen_image:
+            uri_prefix:         /images/image
+            upload_destination: '%kernel.root_dir%/../web/images/image'
+            namer:              vich_uploader.namer_uniqid
             delete_on_update:   true
             delete_on_remove:   true
+            inject_on_load:     true
 
 # fos_user:
 #     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
@@ -73,13 +77,3 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [420, 200], mode: inset }
-
-# knp_snappy:
-#     pdf:
-#         enabled:    true
-#         # binary:     xvfb-run wkhtmltopdf
-# #        options:    []
-#     image:
-#         enabled:    false
-# #        binary:     /usr/local/bin/wkhtmltoimage
-# #        options:    []

@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Tetranz\Select2EntityBundle\TetranzSelect2EntityBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -8,6 +8,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use MWSimple\Bundle\AdminCrudBundle\Form\Type\ButtonDeleteType;
 
+use MWSimple\Bundle\AdminCrudBundle\Form\Type\EmbedType;
+
 class PostEmbedType extends AbstractType
 {
     /**
@@ -21,6 +23,20 @@ class PostEmbedType extends AbstractType
                 'mapped' => false,
                 'attr' => [
                     'col' => 'col-md-1',
+                ],
+            ])
+            ->add('images', EmbedType::class, [
+                'entry_type' => ImageType::class,
+                'allow_add'   => true,
+                'allow_delete' => true,
+                'by_reference'  => false,
+                'prototype_name' => '__nameembed__',
+                'attr' => [
+                    'class' => 'post_image__name__',
+                    // 'class' => 'post_image',
+                    'col'   => 'col-md-12',
+                    // 'width' => "300",
+                    // 'height' => "300"
                 ],
             ])
         ;
